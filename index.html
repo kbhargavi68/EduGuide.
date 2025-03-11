@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>AI Learning Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container text-center">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-10">
+           
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.iaLoMHe21vDgqKNWPxb5XwHaHa&pid=Api" class="nav-img" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" onclick="display('navbarNavAltMarkup')">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+ <!-- Fixed link -->
+            <a class="nav-link" href="main-page.html">Study Plan</a>
+            <a class="nav-link" href="login.html">Login</a>
+        </div>
+    </div>
+</nav>
+
+    </div>
+</div>
+</div>
+    </header>
+    <div id="sectionhome">
+
+    <section class="hero">
+        <h2>Get Personalized Study Plans & Real-Time Support.</h2>
+        
+            <a  href="https://share.chatling.ai/s/JD7B33d7f22HA2g">
+                <img src="https://img.freepik.com/free-vector/chatbot-message-bubble-vectorart_78370-4106.jpg?ga=GA1.1.1359631532.1718372186&semt=ais_hybrid"
+                style="height:15vh;"/>
+            </a>
+       
+    
+    </section>
+
+    <section class="features">
+        <h2>Why Choose AI Tutor?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.pbaRFj3Edvr7W_8w7ntDwwHaFy&w=370&h=370&c=7" class="personalized-img" />
+                <h3>Personalized Learning</h3>
+                <p>Receive study plans based on your performance.</p>
+                <button class="btn btn-primary" onclick="display('sectionpersonalized')">Start</button>
+            </div>
+            <div class="feature">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.DgWruuHknHuc8aaR7FBrKAHaEK&w=266&h=266&c=7" class="personalized-img" />
+                <h3>AI-driven Tracking</h3>
+                <p>Monitor progress and get smart recommendations.</p>
+                <button class="btn btn-primary" onclick="display('sectiontask')">Start</button>
+        
+            </div>
+            <div class="feature">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.WgBiNvVjN4KxF0tH0Qp7VQHaFj&w=355&h=355&c=7" class="personalized-img" />
+                <h3>Interactive Quizzes</h3>
+                <p>Test your knowledge with engaging quizzes.</p>
+                <button class="btn btn-primary" onclick="display('sectionquizzes')">Start</button>
+                
+
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <ul>
+            <li>✅ Sign Up / Login</li>
+            <li>✅ Take a Quiz to Assess Your Level</li>
+            <li>✅ Follow Your Personalized Study Plan</li>
+        </ul>
+    </section>
+</div>
+
+
+    <!--personalized learning-->
+    <div class="body" id="sectionpersonalized">
+    <div class="bg-dark text-white">
+
+        <div class="container mt-5">
+            <h1 class="text-center text-primary">EduGuide - Personalized Study Plan</h1>
+            <p class="text-center">Enter your subject and study goals to receive a customized learning plan.</p>
+    
+            <div class="card bg-secondary p-4">
+                <form id="studyForm">
+                    <div class="form-group">
+                        <label for="subject">Choose a Subject:</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option value="C Programming">C Programming</option>
+                            <option value="Java">Java</option>
+                            <option value="C++">C++</option>
+                            <option value="Data Structures">Data Structures</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="hours">Study Hours per Day:</label>
+                        <input type="number" id="hours" class="form-control" min="1" max="12" placeholder="Enter hours" required>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary btn-block">Generate Study Plan</button>
+                </form>
+            </div>
+    
+            <div id="studyPlan" class="mt-4 p-4 card bg-light text-dark"></div>
+    
+            <!-- Embedded YouTube Video -->
+            <div id="videoContainer" class="mt-4 embed-responsive embed-responsive-16by9" style="display: none;">
+                <iframe id="videoFrame" class="embed-responsive-item" src="" allowfullscreen></iframe>
+            </div>
+            <button class="btn btn-warning">
+                <a href="index.html" class="roadmap-btn" >BAck</a>
+                </button>
+        </div>
+        </div>
+    </div>
+    <!--quizzess-->
+    <div class="body" id="sectionquizzes">
+        <div class="container">
+            <h1 class="title">Welcome to Core Subjects Quizzes</h1>
+            <p class="description">Select a quiz to test your knowledge.</p>
+    
+            <div class="quiz-links">
+                <a href="https://www.w3schools.com/c/c_quiz.php" target="_blank" class="quiz-button">C Quiz</a>
+                <a href="https://www.w3schools.com/cpp/cpp_quiz.asp" target="_blank" class="quiz-button">C++ Quiz</a>
+                <a href="https://www.w3schools.com/java/java_quiz.asp" target="_blank" class="quiz-button">Java Quiz</a>
+                <a href="https://www.w3schools.com/dsa/dsa_quiz.php" target="_blank" class="quiz-button">Data Structures Quiz</a>
+            </div>
+            <button class="btn btn-warning">
+                <a href="index.html" class="roadmap-btn" >BAck</a>
+                </button>
+        </div>
+        </div>
+        <!--Ai task sheduler-->
+        <div class="ai-body" id="sectiontask">
+            <div class="d-flex flex-row justify-content-center">
+
+            <div class="ai-container">
+                <h1 class="ai-title">AI Task Scheduler</h1>
+        
+                <div class="ai-form">
+                    <input type="text" class="ai-task-input" placeholder="Enter your task...">
+                    <input type="datetime-local" class="ai-task-time">
+                    <button class="ai-add-task">Add Task</button>
+                </div>
+        
+                <h2 class="ai-subtitle">Scheduled Tasks</h2>
+                <ul class="ai-task-list"></ul>
+        
+                <button class="ai-optimize">Optimize Schedule</button>
+                <button class="btn btn-warning">
+                    <a href="index.html" class="roadmap-btn" >BAck</a>
+                    </button>
+            </div>
+        
+            <!-- Optimized Schedule Modal -->
+            <div class="ai-modal" id="ai-modal">
+                <div class="ai-modal-content">
+                    <span class="ai-close">&times;</span>
+                    <h2>Optimized Task Schedule</h2>
+                    <ul class="ai-optimized-list"></ul>
+                </div>
+            </div>
+        </div>
+            </div>
+        
+
+    <footer>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 AI Learning Assistant. All Rights Reserved.</p>
+                
+                <nav class="navbar-nav m-auto>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <p><strong>Email:</strong> tutorial.eduguide@gmail.com</p>
+                    <p><strong>Contact:</strong> +91 98765 43210</p>
+                    <p><strong>Address:</strong> 123 AI Street, Tech City, India</p>
+                </div>
+            </div>
+        </footer>
+        
+        <style>
+            footer {
+                background-color: #222;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+            .footer-container {
+                max-width: 1200px;
+                margin: auto;
+            }
+            .footer-container ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .footer-container ul li {
+                display: inline;
+                margin: 0 15px;
+            }
+            .footer-container ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .footer-container ul li a:hover {
+                text-decoration: underline;
+            }
+            .footer-contact {
+                margin-top: 15px;
+            }
+            .footer-contact p {
+                margin: 5px 0;
+            }
+        </style>
+    </footer>
+    
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+ 
+
+</body>
+</html>
